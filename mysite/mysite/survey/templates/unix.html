@@ -1,0 +1,368 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Course End Survey 2015</title>
+<link rel="icon" href="../static/bms.jpeg">
+<link rel="stylesheet" href="../static/css/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700'
+	rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="../static/css/base.css">
+</head>
+
+<SCRIPT language=JavaScript>
+	var iNumQuestions = 9;
+
+	function check() {
+
+		for (var i = 1; i <= iNumQuestions; i++) {
+
+			var bOneChecked = false;
+			var aRadios = document.getElementsByName('score' + i);
+
+			for (var j = 0; j < aRadios.length; j++) {
+
+				if (aRadios[j].checked)
+					bOneChecked = true;
+			}
+
+			if (!bOneChecked) {
+				alert("Please submit all ratings before proceeding.");
+				return false;
+			}
+		}
+
+		return true;
+	}
+</SCRIPT>
+
+
+<body>
+	<div class="topHead">
+		<div class="topLeft">
+			&nbsp;&nbsp;
+			<!-- #BeginEditable "headline" -->
+			Welcome,{{ name }} ! .
+		</div>
+
+	</div>
+	<div class="topBar">
+		<div class="title">
+			<h3>
+				How would you rate subject: Unix Programming
+				. .
+
+			</h3>
+		</div>
+	</div>
+	<div class="ratingChart">
+
+		<div class="rating">
+			Rating <br>Chart
+		</div>
+		<div class="rating rate5">
+			<div class="ratingPoint">5</div>
+			<div class="ratingExplanation">Excellent</div>
+		</div>
+		<div class="rating rate4">
+			<div class="ratingPoint">4</div>
+			<div class="ratingExplanation">Very Good</div>
+		</div>
+		<div class="rating rate3">
+			<div class="ratingPoint">3</div>
+			<div class="ratingExplanation">Good</div>
+		</div>
+		<div class="rating rate2">
+			<div class="ratingPoint">2</div>
+			<div class="ratingExplanation">Fair</div>
+		</div>
+		<div class="rating rate1">
+			<div class="ratingPoint">1</div>
+			<div class="ratingExplanation">Poor</div>
+		</div>
+	</div>
+	<!-- #BeginEditable "text" -->
+	<form method="post" action="https://ise.pythonanywhere.com/db/" name="form1" onSubmit="return check(this)">{% csrf_token %}
+		<input type="hidden" name="stuname"
+			value={{ name }}> <input
+			type="hidden" name="subname"
+			value="unix">
+		<table class="ratingTable">
+			<thead>
+				<tr>
+					<th><font color="white">Question</font></th>
+
+
+					<th><font color="white">5</font></th>
+					<th><font color="white">4</font></th>
+					<th><font color="white">3</font></th>
+					<th><font color="white">2</font></th>
+					<th style="border-right: 0;"><font color="white">1</font></th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+
+
+
+
+
+				     <tr>
+
+					<td class="questionText"> 1. Were you able to understand the basic commands like cal, Printf, echo, date?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score1"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score1"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score1"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score1"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score1"
+						value="1" /></td>
+
+
+
+					</tr>
+
+				     <tr>
+
+					<td class="questionText">2. Were you able to understand file handling commands like wc, rmdir, mkdir, cd, rm?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score2"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score2"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score2"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score2"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score2"
+						value="1" /></td>
+
+
+					</tr>
+
+				     <tr>
+
+					<td class="questionText">3. Were you able to understand the communication commands like finger, email?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score3"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score3"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score3"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score3"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score3"
+						value="1" /></td>
+
+
+					</tr>
+
+                    <tr>
+
+					<td class="questionText">4. Were you able to understand the concepts of hardlink, softlink, changing the permissions file ownership?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score4"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score4"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score4"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score4"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score4"
+						value="1" /></td>
+
+
+					</tr>
+
+                    <tr>
+
+					<td class="questionText">5. Were you able to understand the concept of process creating, listing the process states?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score5"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score5"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score5"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score5"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score5"
+						value="1" /></td>
+
+
+					</tr>
+					<tr>
+
+					<td class="questionText">6. Were you able to execute simple programs based on Unix commands?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score6"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score6"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score6"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score6"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score6"
+						value="1" /></td>
+
+
+					</tr>
+					<tr>
+
+					<td class="questionText">7. Were you able to execute understand the simple filters commands like Sort, Head, Pr, Tail?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score7"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score7"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score7"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score7"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score7"
+						value="1" /></td>
+
+
+					</tr>
+					<tr>
+
+					<td class="questionText">8. Were you able to comprehend the shell scripts basics and Programs based on shell scripts?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score8"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score8"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score8"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score8"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score8"
+						value="1" /></td>
+
+
+					</tr>
+						<tr>
+
+					<td class="questionText">9. Were you able to get the concept of Awk  andPerl basics, Programming on AWK and Perl?</td>
+
+
+
+					<td class="col5"><input type="radio" name="score9"
+						value="5" /></td>
+
+
+					<td class="col4"><input type="radio" name="score9"
+						value="4" /></td>
+
+
+					<td class="col3"><input type="radio" name="score9"
+						value="3" /></td>
+
+
+					<td class="col2"><input type="radio" name="score9"
+						value="2" /></td>
+
+
+					<td class="col1"><input type="radio" name="score9"
+						value="1" /></td>
+
+
+					</tr>
+			</tbody>
+		</table>
+		<input class="btn btn-submit" type="submit" name="submit"
+			value="Submit ratings">
+	</form>
+</body>
+<!-- #EndTemplate -->
+</html>

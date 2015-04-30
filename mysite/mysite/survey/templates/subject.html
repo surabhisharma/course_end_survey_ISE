@@ -1,0 +1,70 @@
+
+<html>
+	<head>
+		<title>Course End Survey 2015</title>
+		<link rel="stylesheet" href="../static/css/base.css">
+		<link rel="icon" href="../static/bms.jpeg">
+		<link rel="stylesheet" href="../static/css/styles.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="topHead">
+
+			<div class="topLeft">
+				<div class="spacer">
+				<!-- #BeginEditable "headline" -->Welcome ,  .&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- #EndEditable -->
+			   </div>
+		   </div>
+			<div class="topRight">
+
+				<a href="https://ise.pythonanywhere.com/logout"><div class="logoutBtn">Logout</div></a>
+
+			</div>
+		</div>
+		<div class="topBar">
+			<div class="title">
+				<h3>Please give your Course End Survey </h3>
+			</div>
+		</div>
+		<!-- #BeginEditable "text" -->
+		<form method="post" action="rateSessions" name="form1" style="box-shadow: none;">
+		<div class="cardContainer">
+
+
+ {% for sub in subjects %}
+ {% if sub.done == 0 %}
+<div class="card">
+
+	<h3 class="name"> . {{ sub.subject}} . </h3>
+    <br/>
+    <br/>
+	<a class="evaluateContainer" href="https://ise.pythonanywhere.com/store/{{ sub.subject_code }}"><div class="evaluate">Survey</div></a>
+</div>
+{% endif %}
+{% endfor %}
+
+
+		</div>
+	  </form>
+                  <!-- #EndEditable -->
+
+
+<tr></tr>
+<div class="logout">
+
+			</div>
+
+<div class="footer">
+	<div class="bottomLeft">
+		Course End Survey 2015
+	</div>
+	<div class="bottomRight">
+		Copyrights © 2015. All Rights Reserved
+	</div>
+</div>
+
+
+</body>
+<!-- #EndTemplate -->
+</html>

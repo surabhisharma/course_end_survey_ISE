@@ -1,0 +1,318 @@
+body{
+	margin:0;
+	background: #F4F6F3;
+	font-family: 'Lato', sans-serif;
+}
+.topHead {
+width: 100%;
+height: 25px;
+background: #212121;
+color: #FFF;
+font-size: 17px;
+font-weight: 300;
+}
+.topLeft , .topRight, .topcenter{
+display: inline-block;
+}
+.topLeft {
+width: 45%;
+}
+.topcenter {
+width: 45%;
+}
+
+.logoutBtn {
+height: 25px;
+background: #212121;
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.topRight {
+width: 9.5%;
+text-align: center;
+}
+.topRight a {
+text-decoration: none;
+color: #FFF;
+font-weight: 300;
+}
+.logoutBtn:hover {
+background: #C73737;
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.footer {
+position: fixed;
+width: 100%;
+bottom: 0;
+background: #212121;
+color: #FFF;
+height: 25px;
+font-size: 13px;
+font-weight: 300;
+}
+.bottomLeft {
+display: inline-block;
+padding: 3px 10px;
+}
+.bottomRight {
+display: inline-block;
+padding: 3px 10px;
+float:right;
+}
+h3 {
+text-align: center;
+color: #FFF;
+margin: 0;
+padding: 15px;
+font-weight: 300;
+font-size: 30px;
+}
+.card {
+width: 400px;
+display: inline-block;
+height: 122px;
+background: rgba(255, 255, 255, 0.6);
+margin: 10px 5px 0 0;
+box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.full {
+width: 100%;
+background: #86B57F url("../images/tick.png") 106% 230% no-repeat;
+}
+.full:hover {
+background: #86B57F url("../images/tick.png") 106% 230% no-repeat !important;
+}
+.full .name {
+color: #F0F0F0;
+font-size: 35px;
+font-weight: 300;
+padding-top: 35px;
+}
+.card:hover{
+	background: #fff;
+	-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+form {
+text-align: center;
+padding: 0;
+box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+margin: 10px 50px;
+}
+.title {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+.topBar {
+border-bottom: 3px solid #323A45;
+background: #0205D1;
+}
+.name {
+padding-bottom: 0;
+font-size: 23px;
+font-weight: 400;
+color: #646464;
+}
+.subject {
+margin-top: 0;
+text-align: center;
+font-size: 14px;
+font-weight: 300;
+color: #646464;
+}
+.cardContainer {
+text-align: left;
+}
+.evaluate {
+background: #0205D1;
+text-align: center;
+text-decoration: none;
+padding: 10px;
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.evaluateContainer {
+text-decoration: none;
+color: #ECECEC;
+}
+.evaluate:hover {
+box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
+background: #4990E0;
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.ratingChart {
+width: 100%;
+padding: 10px 0;
+text-align: center;
+}
+.rating {
+display: inline-block;
+width: 100px;
+margin: 5px;
+padding: 5px;
+box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+background:#fff;
+}
+.ratingTable {
+width: 100%;
+background: #FFF;
+border-collapse: collapse;
+}
+.ratingTable thead {
+background: #0205D1;
+}
+.ratingTable thead th {
+font-size: 20px;
+font-weight: 300;
+padding: 5px;
+border-right: 1px solid rgba(250, 250, 250, 0.1);
+}
+.ratingTable tbody td {
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+padding: 10px;
+font-size: 17px;
+border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.questionText{
+	text-align:left;
+	padding-left: 30px !important;
+}
+textarea:focus {
+outline: none;
+}
+.btn {
+background: #FFF;
+border: 0;
+padding: 10px;
+width: 100%;
+margin:0;
+}
+.btn-submit {
+background: #86B57F;
+color: #FFF;
+font-size: 18px;
+font-weight: 300;
+}
+.btn-submit:hover {
+background: #73A06C;;
+cursor: pointer;
+}
+.backBtn .rating {
+background: #DF4949;
+color: #FFF;
+}
+.backBtn .rating:hover {
+background: #C73737;
+}
+.col1 {
+border-right: 0 !important;
+}
+.logo {
+background: none !important;
+text-align: center;
+margin-top: 20px;
+}
+.loginCont {
+width: 400px;
+text-align: center;
+margin: 0 auto;
+}
+.loginFieldsCont input {
+width: 100%;
+background-color: #86B57F !important;
+margin: 0;
+border: 1px solid #D5EFB0;
+padding: 0 15px;
+height: 50px;
+font-size: 30px;
+color: #FCFEFD;
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.loginFieldsCont input:focus {
+outline: none;
+}
+.loginFieldsCont {
+display: inline-block;
+width: 300px;
+background: #FFF;
+clear:both;
+vertical-align: bottom;
+}
+.submitCont {
+display: inline-block;
+width: 100px;
+clear:both;
+vertical-align: bottom;
+}
+.submitCont input {
+width: 100px;
+height: 100px;
+background: #82BF72;
+border: 1px solid #D5EFB0;
+border-left: 0;
+color: #FCFEFD;
+font-size: 25px;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #86B57F inset;
+	-webkit-text-fill-color: #FCFEFD;
+}
+.logoCont {
+border: 1px solid #D5EFB0;
+border-bottom: 0;
+background: #E9FFE5;
+height: 150px;
+padding-top: 35px;
+box-shadow: 0 0 18px 1px rgba(0, 0, 0, 0.4);
+}
+.submitCont input:hover {
+cursor: pointer;
+background: #719169;
+-webkit-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-moz-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	-o-transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #FCFEFD;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #FCFEFD;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #FCFEFD;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #FCFEFD;
+}
+input:focus {
+outline: none;
+}
+.ratingTable1 tbody td {
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+padding: 10px;
+font-size: 17px;
+border-right: 1px solid rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,247 @@
+td {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.smalltype {  font-size: 8pt; font-weight: bold; }
+.pagetitle { 
+ font-size: 16px; 
+ font-weight: bold;
+ color: grey
+ 
+ }
+.boxtitle {
+	
+	font-weight: bold; color:#1664a0; 
+    background: #ffffff url(images/shd2.jpg) repeat-x;
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px;
+	
+}
+ 
+#menu1 {
+	font-weight: bold; color:black; 
+	width:120px;
+	height:15px;
+    background:#A52A2A;
+	
+}
+#menu2 {
+	font-weight: bold; color:black; 
+	width:59px;
+	height:15px;
+    background:#A52A2A ;
+}
+#menu {
+	
+    background:#cccccc ;
+}
+#menu0 {
+	
+    background:#003333 ;
+}
+
+#menu0 a
+{
+font:verdana;
+background:#cccccc;
+
+}
+#menu0 a:hover {
+	background: #ffffff ;
+	
+}
+
+#menu ul {
+	
+}
+
+#menu li {
+	display: inline;
+}
+
+/*#menu v{
+	display: block;
+	float: left;
+	text-transform: lowercase;
+	text-decoration: none;
+	text-align: center;
+	font-size: 54%;
+	color: #A52A2A;
+}
+*/
+#menu a
+{
+font:verdana;
+background:#cccccc;
+
+}
+#menu a:hover {
+	background: #ffffff ;
+	
+}
+
+/*#menu .active a {
+	background: #F49A24;
+	color: #FFFFFF;
+}
+*/
+
+
+.calendar {  font-family: courier, mono, monospace, monospaced; font-size: 10pt}
+.pagestyle {}
+
+
+
+
+#leftnav A {
+	FONT-SIZE: 9pt; 
+	FONT-STYLE: normal; 
+	FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 3px;
+	DISPLAY: block; MARGIN: 0px;
+}
+#leftnav A:hover {
+	BACKGROUND-COLOR: grey; COLOR:blue;FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;
+}
+#leftnav DIV {
+	PADDING-BOTTOM:0px;PADDING-LEFT:0px;PADDING-RIGHT:0px;PADDING-TOP:0px;
+}
+
+
+#leftctrls
+{
+FONT-WEIGHT: BOLD;
+color:#15428b;
+background: #ffffff url(images/shd2.jpg) repeat-x;
+}
+#leftctrls A {
+    
+	COLOR: #1664a0;
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 8pt; 
+	
+	FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	background: #ffffff url(images/shd2.jpg) repeat-x;
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px;
+	DISPLAY: block; MARGIN: 0px;
+}
+#leftctrls A:hover {
+    font-weight: bold; color:black; 
+	BACKGROUND-COLOR: grey; COLOR:blue;FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;
+	background: #ffffff url(images/shd1.jpg) repeat-x;
+}
+#leftctrls DIV {
+	PADDING-BOTTOM:0px;PADDING-LEFT:0px;PADDING-RIGHT:0px;PADDING-TOP:0px;
+}
+
+
+
+#suleftctrls
+{
+FONT-WEIGHT: BOLD;
+color:#15428b;
+background: #ffffff url(images/shd2.jpg) repeat-x;
+}
+#suleftctrls A {
+    
+	COLOR: #1664a0;
+	FONT-WEIGHT: BOLD;
+	FONT-SIZE: 8pt; 
+	
+	FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	background: #ffffff url(images/shd2.jpg) repeat-x;
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px;
+	DISPLAY: inline;
+}
+#suleftctrls A:hover {
+    font-weight: bold; color:black; 
+	BACKGROUND-COLOR: grey; COLOR:blue;FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;
+	background: #ffffff url(images/shd1.jpg) repeat-x;
+}
+#suleftctrls DIV {
+	PADDING-BOTTOM:0px;PADDING-LEFT:0px;PADDING-RIGHT:0px;PADDING-TOP:0px;
+	background: #ffffff url(images/shd2.jpg) repeat-x;
+}
+
+
+.logo
+{
+color:#1E90FF;
+font-size:12pt;
+font-weight:bold;
+font-name:verdana;
+padding-left:.3em;
+padding-right:.3em;
+background: #ffffff url(images/shd2.jpg) repeat-x ;
+filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#ffffff', startColorstr='#bae5f6', gradientType='0');
+fore-color:black;
+/*background: #ffffff url(images/logo-i.jpg) repeat-x;*/
+
+}
+
+.message
+{
+color:red;
+font-size:10pt;
+font-weight:bold;
+font-name:verdana;
+padding-left:.3em;
+padding-right:.3em;
+
+/*background: #ffffff url(images/logo-i.jpg) repeat-x;*/
+
+}
+
+
+.logo1
+{
+height:51px;
+width:10em;
+
+background: #ffffff url(images/logoIMEC.jpg) no-repeat ;
+}
+.innerhead
+{
+color:#000000;
+font-size:10pt;
+font-weight:bold;
+
+font-name:verdana;
+}
+.login
+{
+color:#000000;
+font-size:10pt;
+font-weight:normal;
+
+font-name:verdana;
+}
+
+.header
+{
+
+background:#cae6f9;
+width:320px;
+height:25px;
+padding-left:2em;
+padding-right:2em;
+padding-top:.6em;
+padding-bottom:.3em;
+font-size:8pt;
+font-weight:600;
+text-transform:uppercase;
+color:#000000;
+border:2px;
+border-color:#1E90FF;
+}
+
+.center
+{
+
+background: #cae6f9 url(images/bg.jpg) repeat-x;
+}
+.boxbcolor
+{
+BACKGROUND-COLOR: #f6f6f6;
+color:black;
+}
