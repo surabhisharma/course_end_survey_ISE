@@ -4,7 +4,7 @@ import datetime
 from django.shortcuts import render, HttpResponseRedirect
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate ,  login
-from mysite.survey.models import sem_6_ads , sem_6_cc , sem_4 , MonthlyWeatherByCity
+from mysite.survey.models import sem_6_ads , sem_6_cc , sem_4 ,sem_8, MonthlyWeatherByCity
 from django.template import RequestContext
 from django.core.context_processors import csrf
 from django.core.urlresolvers import reverse
@@ -29,14 +29,17 @@ def log(request):
             sem_6_list_ads = sem_6_ads.objects.filter(usn = username1)
             sem_6_list_cc = sem_6_cc.objects.filter(usn = username1)
             sem_4_list = sem_4.objects.filter(usn = username1)
+            sem_8_list = sem_8.objects.filter(usn = username1)
             if(len(sem_6_list_ads)):
                 count=1
             elif(len(sem_6_list_cc)):
                 count=0
             elif(len(sem_4_list)):
                 count=99
-            else:
+            elif( len(sem_8_list)):
                 count=100
+            else :
+                count = 102
             if( count == 1 ):
                 for sub in sem_6_list_ads :
                     if sub.done == 0:
@@ -61,8 +64,16 @@ def log(request):
                     return render(request,'subject.html',{'subjects':sem_4_list,'name':request.session['name1']})
                 else:
                     return redirect("https://ise.pythonanywhere.com/complete")
+            elif( count == 100 ):
+                for sub in sem_8_list :
+                    if sub.done == 0:
+                        l=1
+                if l == 1 :
+                    return render(request,'subject.html',{'subjects':sem_8_list,'name':request.session['name1']})
+                else:
+                    return redirect("https://ise.pythonanywhere.com/complete")
             else:
-                return redirect('http://ise.pythonanywhere.com/')
+                return redirect("https://ise.pythonanywhere.com/admin")
     else:
         return redirect('http://ise.pythonanywhere.com/')
 
@@ -79,6 +90,7 @@ def form_store(request):
     sem_6_list_ads = sem_6_ads.objects.filter(usn = username)
     sem_6_list_cc = sem_6_cc.objects.filter(usn = username)
     sem_4_list = sem_4.objects.filter(usn = username)
+    sem_8_list = sem_8.objects.filter(usn = username)
     if( len(sem_6_list_ads)):
         count=1
 
@@ -86,6 +98,11 @@ def form_store(request):
         count=0
     elif(len(sem_4_list)):
         count=99
+    elif(len(sem_8_list)):
+        count=100
+    else:
+        count=102
+
     if(subject_id == "ads"):
         f = m.ads(usn=request.POST['stuname'],timestamp=datetime.datetime.today(),q1=request.POST['score1'],q2=request.POST['score2'],q3=request.POST['score3'],q4=request.POST['score4'],q5=request.POST['score5'])
         f.save()
@@ -228,6 +245,65 @@ def form_store(request):
             c = m.sem_4.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
             c.done="1"
             c.save()
+
+    elif(subject_id == "icl"):
+        f = m.icl(usn=request.POST['stuname'],timestamp=datetime.datetime.today(),q1=request.POST['score1'],q2=request.POST['score2'],q3=request.POST['score3'],q4=request.POST['score4'],q5=request.POST['score5'])
+        f.save()
+        if( count == 1 ):
+            c = m.sem_6_ads.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        elif( count == 0):
+            c = m.sem_6_cc.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        elif( count == 100 ):
+            c = m.sem_8.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        else:
+            c = m.sem_4.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+
+    elif(subject_id == "san"):
+        f = m.san(usn=request.POST['stuname'],timestamp=datetime.datetime.today(),q1=request.POST['score1'],q2=request.POST['score2'],q3=request.POST['score3'],q4=request.POST['score4'],q5=request.POST['score5'])
+        f.save()
+        if( count == 1 ):
+            c = m.sem_6_ads.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        elif( count == 0):
+            c = m.sem_6_cc.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        elif( count == 100 ):
+            c = m.sem_8.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        else:
+            c = m.sem_4.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+    elif(subject_id == "project"):
+        f = m.project(usn=request.POST['stuname'],timestamp=datetime.datetime.today(),q1=request.POST['score1'],q2=request.POST['score2'],q3=request.POST['score3'],q4=request.POST['score4'],q5=request.POST['score5'])
+        f.save()
+        if( count == 1 ):
+            c = m.sem_6_ads.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        elif( count == 0):
+            c = m.sem_6_cc.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        elif( count == 100 ):
+            c = m.sem_8.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
+        else:
+            c = m.sem_4.objects.get(subject_code=request.POST['subname'],usn = request.POST['stuname'])
+            c.done="1"
+            c.save()
     else:
         f = m.unix(usn=request.POST['stuname'],timestamp=datetime.datetime.today(),q1=request.POST['score1'],q2=request.POST['score2'],q3=request.POST['score3'],q4=request.POST['score4'],q5=request.POST['score5'],q6=request.POST['score6'],q7=request.POST['score7'],q8=request.POST['score8'],q9=request.POST['score9'])
         f.save()
@@ -254,6 +330,8 @@ def sub(request):
     sem_6_list_ads = sem_6_ads.objects.filter(usn = username)
     sem_6_list_cc = sem_6_cc.objects.filter(usn = username)
     sem_4_list = sem_4.objects.filter(usn = username)
+    sem_8_list = sem_8.objects.filter(usn = username)
+
     if( len(sem_6_list_ads)):
         count=1
 
@@ -261,8 +339,10 @@ def sub(request):
         count=0
     elif(len(sem_4_list)):
         count=99
-    else:
+    elif(len(sem_8_list)):
         count=100
+    else:
+        count=102
     if( count == 1 ):
         for sub in sem_6_list_ads :
             if sub.done == 0:
@@ -287,6 +367,16 @@ def sub(request):
             return render(request,'subject.html',{'subjects':sem_4_list,'name':request.session['name1']})
         else:
             return redirect("https://ise.pythonanywhere.com/complete")
+
+    elif( count == 100):
+        for sub in sem_8_list :
+            if sub.done == 0:
+                l=1
+        if l == 1 :
+            return render(request,'subject.html',{'subjects':sem_8_list,'name':request.session['name1']})
+        else:
+            return redirect("https://ise.pythonanywhere.com/complete")
+
     else:
         return redirect('http://ise.pythonanywhere.com/')
 
@@ -311,6 +401,13 @@ def store(request,product):
         return render(request,'ada.html',{'name':request.session['name1']})
     elif(product == 'unix'):
         return render(request,'unix.html',{'name':request.session['name1']})
+    elif(product == 'icl'):
+        return render(request,'icl.html',{'name':request.session['name1']})
+    elif(product == 'san'):
+        return render(request,'san.html',{'name':request.session['name1']})
+    elif(product == 'project'):
+        return render(request,'project.html',{'name':request.session['name1']})
+
     else:
         return render(request,'oop.html',{'name':request.session['name1']})
 
